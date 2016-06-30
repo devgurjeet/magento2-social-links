@@ -11,7 +11,6 @@
             <resource>Gss_SocialLinks::config</resource>
             <group id="gss_social_links" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">                
                 <label>Social Links</label>
-
                 <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
                    <label>Enable Social links</label>
                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
