@@ -5,6 +5,15 @@
 	$google_plus = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/google_plus');	
 	$facebook    = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/facebook');	
 	$twitter     = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/twitter');	
+
+	 
+		echo "<pre>";
+		print_r($google_plus );
+		print("<br>");
+		print_r($facebook );
+		print("<br>");
+		print_r($twitter );
+		echo "</pre>";	
 ?>
 <?php if ($status): ?>
 	<style>
@@ -15,17 +24,17 @@
 	<div class="gss_social_container">
 		<ul class="gss_social_list">
 			
-			<?php if ($google_plus): ?>
+			<?php if( isset($google_plus) ): ?>
 				<li class="gss_social_item"><a href="<?php echo $google_plus;?>">Google+</a></li>
-			<?php endif; ?>
+			<?php endif;?>
 			
-			<?php if ($facebook): ?>
+			<?php if( isset($facebook) ): ?>
 				<li class="gss_social_item"><a href="<?php echo $facebook;?>">Facebook</a></li>
-			<?php endif; ?>
+			<?php endif;?>
 			
-			<?php if ($Twitter): ?>
+			<?php if( isset($twitter) ): ?>
 				<li class="gss_social_item"><a href="<?php echo $twitter;?>">Twitter</a></li>
-			<?php endif; ?>			
+			<?php endif;?>
 		</ul>
 	</div>
 <?php endif; ?>
