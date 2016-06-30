@@ -7,11 +7,25 @@
 	$twitter     = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/twitter');	
 ?>
 <?php if ($status): ?>
+	<style>
+		.gss_social_list{padding: 0; list-style: none;}
+		.gss_social_item{padding: 0 5px; font-weight: 700; display: inline;}
+	</style>
+
 	<div class="gss_social_container">
 		<ul class="gss_social_list">
-			<li class="gss_social_item"><a href="<?php echo $google_plus;?>">Google+</a></li>
-			<li class="gss_social_item"><a href="<?php echo $facebook;?>">Facebook</a></li>
-			<li class="gss_social_item"><a href="<?php echo $twitter;?>">Twitter</a></li>
+			
+			<?php if ($google_plus): ?>
+				<li class="gss_social_item"><a href="<?php echo $google_plus;?>">Google+</a></li>
+			<?php endif; ?>
+			
+			<?php if ($facebook): ?>
+				<li class="gss_social_item"><a href="<?php echo $facebook;?>">Facebook</a></li>
+			<?php endif; ?>
+			
+			<?php if ($Twitter): ?>
+				<li class="gss_social_item"><a href="<?php echo $twitter;?>">Twitter</a></li>
+			<?php endif; ?>			
 		</ul>
 	</div>
 <?php endif; ?>
