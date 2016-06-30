@@ -1,9 +1,17 @@
 <?php 
 	use Magento\Framework\App\Action\Action;
 
-	$getItemValue = $this->helper('AW\ProductFilter\Helper\Data')->getConfigValue('AwProductFilter/txt/textsample');	
-
+	$status      = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/active');	
+	$google_plus = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/google_plus');	
+	$facebook    = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/facebook');	
+	$twitter     = $this->helper('GSS\SocialLinks\Helper\Data')->getConfigValue('GssSocialLinks/gss_social_links/twitter');	
 ?>
-<div style="color: red; font-weight:600">
-	<p>Note: This product is not avaliable at your location.</p>
-</div>
+<?php if ($status): ?>
+	<div class="gss_social_container">
+		<ul class="gss_social_list">
+			<li class="gss_social_item"><a href="<?php echo $google_plus;?>">Google+</a></li>
+			<li class="gss_social_item"><a href="<?php echo $facebook;?>">Facebook</a></li>
+			<li class="gss_social_item"><a href="<?php echo $twitter;?>">Twitter</a></li>
+		</ul>
+	</div>
+<?php endif; ?>

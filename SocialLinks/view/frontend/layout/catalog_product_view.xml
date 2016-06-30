@@ -1,7 +1,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-  <body>
-  	<referenceContainer name="product.info.main">            
-        <block class="GSS\SocialLinks\Block\Catalog\Product\Filter" name="aw_product_filter.filter" template="GSS_SocialLinks::product/socialBlock.phtml" after="-"></block>
-    </referenceContainer>
-  </body>
+	<head>
+	    <css src="GSS_SocialLinks::css/social.css"/>
+	</head>
+  	<body>
+	  	<referenceContainer name="product.info.main">            
+	        <block class="GSS\SocialLinks\Block\Catalog\Product\Filter" name="gss_sociallinks.filter" template="GSS_SocialLinks::product/socialBlock.phtml" after="-"></block>
+	    </referenceContainer>
+  	</body>
 </page>
